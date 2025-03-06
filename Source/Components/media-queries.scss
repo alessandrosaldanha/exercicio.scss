@@ -1,13 +1,25 @@
 @use '../Config/mixins' as *;
 
 @include responsive(1023px) {
+    .branding {
+        margin-left: 16px;
+    }
+
+    .menu {
+        padding: 16px;
+    }
     .container {
         max-width: 80%;
+        
+    }
+    .content {
+        padding: 16px;
     }
 
     .products {
         grid-template-columns: repeat(2, 48.5%);
         column-gap: 3%;
+        
     }
 }
 

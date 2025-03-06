@@ -1,5 +1,18 @@
 @use '../Config/cores' as *;
 
+.content {
+    max-width: 1650px;  
+        width: 100%;        
+        margin: 0 auto;
+}
+
+.branding img {
+    width: 48px;
+    height: 48px;
+    object-fit: cover; // Garante que a imagem preencha o espaço sem distorcer
+}
+
+
 .products {
     margin-top: 40px;
     display: grid;
@@ -7,12 +20,33 @@
     column-gap: 1%;
     row-gap: 4%;
     width: 100%;
+    list-style: none;
+    
 
     .product-item {
+
+        list-style: none;
+        
         img {
             width: 100%;
+            height: 180px;
             border-radius: 16px;
+            object-fit: cover;
         }
+            h4 {
+                margin-bottom: 8px; // Ajuste o valor conforme necessário
+            }
+        
+            p {
+                margin-top: 8px;
+                display: -webkit-box;
+                -webkit-line-clamp: 4;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                max-height: 6em; 
+            }
+        
 
         .product-button {
             display: block;
